@@ -24,7 +24,8 @@ export function AppSidebar() {
 
   const renderNavItem = (item: NavItem, index: number) => (
     <SidebarMenuItem key={`${item.label}-${index}`}>
-      <Link href={item.href} legacyBehavior passHref>
+      <Link href={item.href} passHref>
+
         <SidebarMenuButton
           asChild
           isActive={pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href) && item.href !== '/dashboard')}
